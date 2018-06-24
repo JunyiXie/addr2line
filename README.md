@@ -28,6 +28,15 @@ performed programmatically through `Context::find_location` and
    or [`addr2line::Context::find_frames`](https://docs.rs/addr2line/*/addr2line/struct.Context.html#method.find_frames)
    to look up debug information for an address
 
+# Sample in Terminal
+
+```
+checkout a copy of the addr2line source code, and build the example with cargo build --examples --release. The binary will be at target/release/examples/addr2line.
+
+echo 0x1234 | addr2line -e <path-to-dsym>.
+```
+
+
 # Performance
 
 The library aims to perform similarly to equivalent existing tools such
